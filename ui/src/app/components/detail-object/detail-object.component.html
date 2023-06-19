@@ -1,5 +1,5 @@
 <div class="detail-object">
     <div class="detail-object-item" *ngFor="let item of data | keyvalue;">
-        <app-detail-tree *ngIf="matchType(item.value, 'object')" [data]="item.value" [configuration]="configuration"></app-detail-tree>
+        <app-detail-tree *ngIf="matchType(item.value, 'object') && configuration[item.key + '']['score'] >= 1.5" [data]="item.value" [configuration]="configuration[item.key + '']"></app-detail-tree>
     </div>
 </div>

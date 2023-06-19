@@ -12,6 +12,6 @@ export class DetailListComponent extends BaseComponent{
   @Input() configuration:Record<string, any> = {};
   constructor(){
     super();
-    console.log(this.data);
+    console.log(this.data, this.configuration);
   }
 }

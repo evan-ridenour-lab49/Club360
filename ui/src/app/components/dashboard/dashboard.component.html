@@ -1,0 +1,18 @@
+<div class="dashboard">
+    <div class="dashboard-toolbar">
+        <div class="logo">
+            <h1>Club360</h1>
+        </div>
+        <div class="dashboard-search-container">
+            <input type="search" (change)="searchChange($event)" [placeholder]="searchPlaceholder"/>
+        </div>
+    </div>
+    <div class="dashboard-main">
+        <div *ngIf="data">
+            <app-detail-tree [data]="data['json']" [configuration]="data['configuration']"></app-detail-tree>
+        </div>
+        <div>
+            <mat-progress-spinner></mat-progress-spinner>
+        </div>
+    </div>
+</div>

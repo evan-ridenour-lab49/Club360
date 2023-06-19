@@ -1,0 +1,18 @@
+{
+	"clientName": "Fidelity Investments LLC.",
+	"location": "Boston, MA, USA",
+	"sector": "finance",
+	"Super Awesome Name": "Dude",
+	"dude": [0, 1, 2, 3],
+	"why": [
+		{ "wow": "Ok", "cool": 50},
+		{ "neat": "Ok", "cool": 50}
+	],
+	"data": {
+		"dude": [0, 1, 2, 3],
+		"what": "wow",
+		"another": {
+			"why": 5
+		}
+	}
+}

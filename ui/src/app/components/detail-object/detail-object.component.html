@@ -1,0 +1,5 @@
+<div class="detail-object">
+    <div class="detail-object-item" *ngFor="let item of data | keyvalue;">
+        <app-detail-tree *ngIf="matchType(item.value, 'object')" [data]="item.value" [configuration]="configuration"></app-detail-tree>
+    </div>
+</div>

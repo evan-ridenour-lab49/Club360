@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: fidelityCrewHack2023
+    ports:
+      - 5432:5432
+  rabbitmq:
+    image: rabbitmq
+    restart: always
+    ports:
+      - 15672:15672
+      - 5672:5672
+
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 8080:8080

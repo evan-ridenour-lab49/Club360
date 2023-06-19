@@ -1,0 +1,5 @@
+<div class="detail-list">
+    <div class="detail-list-item" *ngFor="let item of data; let i = index">
+        <app-detail-tree [data]="item" [configuration]="configuration"></app-detail-tree>
+    </div>
+</div>

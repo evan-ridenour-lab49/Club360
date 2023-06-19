@@ -1,0 +1,15 @@
+<div class="detail-tree">
+    <div *ngIf="objectData">
+        <div *ngFor="let item of objectData | keyvalue;" class="client-detail">
+            <div *ngIf="matchType(item.value, 'string') || matchType(item.value, 'number') && configuration[item.key] >= 1.5" class="client-detail-group">
+                <div class="client-detail-label">{{transformLabel(item.key)}}:</div>
+                <div class="client-detail-value">{{item.value}}</div>
+            </div>
+            <app-detail-list *ngIf="isArray(item.value) && configuration[item.key]['score'] >= 1.5" 
+                [data]="item.value" [configuration]="configuration[item.key]['childItems']['__ARRAY__'] ?? {}"></app-detail-list>
+            <app-detail-object *ngIf="matchType(item.value, 'object') && !isArray(item.value) && configuration[item.key]['score'] >= 1.5" 
+                [data]="item.value" [configuration]="configuration[item.key]['childItems'] ?? {}"></app-detail-object>
+        </div>
+    </div> 
+    <app-detail-list *ngIf="arrayData" [data]="arrayData"></app-detail-list>
+</div>
